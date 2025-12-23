@@ -1,0 +1,39 @@
+# Python
+# Virtual environment
+venv/
+env/
+.venv/
+*/venv/
+*/env/
+
+# Byte-code files
+__pycache__/
+*.pyc
+*.pyd
+*.pyo
+
+# IDE specific files
+.idea/
+.vscode/
+*.swp
+*~
+
+# Django and Database
+# Local database file (Render uses PostgreSQL)
+db.sqlite3
+*.log
+
+# Environment variables file (contains secrets, should not be committed)
+.env
+.flaskenv
+instance/
+
+# Static and media files generated locally or in production
+static/
+staticfiles/
+media/
+
+# Test and coverage files
+.coverage
+htmlcov/
+.pytest_cache/
