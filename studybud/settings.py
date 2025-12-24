@@ -51,7 +51,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    
+
     'cloudinary',
 
     'base.apps.BaseConfig',
@@ -157,14 +157,14 @@ USE_TZ = True
 #     },
 # }
 
-# STORAGES = {
-#     "default": {
-#         "BACKEND": "cloudinary_storage.storage.MediaCloudinaryStorage",
-#     },
-#     "staticfiles": {
-#         "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
-#     },
-# }
+STORAGES = {
+    "default": {
+        "BACKEND": "cloudinary_storage.storage.MediaCloudinaryStorage",
+    },
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+    },
+}
 
 
 STATIC_URL = '/static/'
@@ -184,6 +184,7 @@ CLOUDINARY_STORAGE = {
 
 
 MEDIA_URL = '/images/'
+
 
 STATICFILES_DIRS = [
     BASE_DIR / 'static',
