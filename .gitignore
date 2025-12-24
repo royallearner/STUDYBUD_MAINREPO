@@ -28,11 +28,6 @@ db.sqlite3
 .flaskenv
 instance/
 
-# Static and media files generated locally or in production
-static/
-staticfiles/
-media/
-
 # Test and coverage files
 .coverage
 htmlcov/
