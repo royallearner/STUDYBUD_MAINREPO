@@ -43,7 +43,7 @@ if RENDER_EXTERNAL_HOSTNAME:
 # Application definition
 
 INSTALLED_APPS = [
-    'cloudinary_storage',
+    
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -52,6 +52,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    
+    'cloudinary_storage',
     'cloudinary',
 
     'base.apps.BaseConfig',
@@ -178,6 +180,8 @@ if not DEBUG:
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
+WHITENOISE_KEEP_ONLY_HASHED_FILES = False
+
 CLOUDINARY_STORAGE = {
     'CLOUD_NAME': os.environ.get('CLOUDINARY_CLOUD_NAME'),
     'API_KEY': os.environ.get('CLOUDINARY_API_KEY'),
@@ -188,9 +192,7 @@ CLOUDINARY_STORAGE = {
 MEDIA_URL = '/images/'
 
 
-STATICFILES_DIRS = [
-    BASE_DIR / 'static',
-]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 MEDIA_ROOT = BASE_DIR / 'static/images'
 
