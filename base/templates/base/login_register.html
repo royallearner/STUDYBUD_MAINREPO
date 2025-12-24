@@ -1,6 +1,7 @@
 {% extends 'main.html' %}
 
 {% block content %}
+
 {% if page == 'login' %}
 <main class="auth layout">
       <div class="container">
@@ -108,6 +109,12 @@
         </div>
       </div>
     </main>
+{% endif %}
+
+{% if form.errors %}
+    <div class="alert alert-danger">
+        {{ form.errors }}
+    </div>
 {% endif %}
 
 {% endblock content %}
